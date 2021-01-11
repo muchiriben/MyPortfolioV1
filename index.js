@@ -5,7 +5,6 @@ var cursor = true;
 var speed = 250;
 
 let index = 0;
-let index3 = 0;
 let index2 = 0;
 
 setInterval(() => {
