@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Fira+Code&family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Nova+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="intro">
+        <p>Strathmore University
+        <span id="intro-text">Benard Muchiri</span>
+        Full-Stack Developer</p>
+    </div>
+
+    <script defer type="text/javascript">
+        window.addEventListener("load", () => {
+          const intro = document.querySelector(".intro");
+          setTimeout(() => {
+            intro.classList.add("intro-finish");
+          }, 2500);
+          
+        });
+      </script>
+
+    <nav class="navbar" id="navbar">
+        <a class="logo" href="./index.html">Benard Muchiri</a>
+        <ul>
+            <li><span>01.</span> <a href="#about">About</a> </li>
+            <li><span>02.</span> <a href="#skills">Skills</a> </li>
+            <li><span>03.</span> <a href="#projects">Projects</a> </li>
+            <li><span>04.</span> <a href="#contact">Contact</a> </li>
+            <a class="resume" target="_blank" href="./resume.pdf">Resume</a>
+        </ul> 
+    </nav>
+
+    <section class="main">
+       <div class="links">
+        <div class="icons">
+            <a href="https://github.com/muchiriben" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/benard-njoroge-405055204/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/benthegreat27/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fas fa-code-branch"></i></a>
+            <div class="vertical-line"></div>
+        </div>
+       </div>
+
+       <div class="content">
+           <div class="hero-section">
+            <span id="intro-text">Hey, my name is</span><br>
+            <div id="name"></div>
+            <div id="role"></div>
+            <span id="cursor-name">|</span><br>
+            <p>I am a Passionate Computer Science university student seeking to apply my skills and knowledge to build awesome apps for the internet. I love creating new web app solutions and inspiring to be a <span class="important-text">Full-Stack Web Developer</span>.</p> 
+            <a class="contact-me" href="mailto:benmnjoroge98@gmail.com" target="_blank" rel="noopener noreferrer">Contact Me</a>
+           </div>
+
+           <div class="about" id="about">
+               <div class="details">
+                   <h1><span>01.</span> About</h1>
+                   <p>Hey! I'm Ben, a Computer Science student at Strathmore University. </p>
+                   <p>I have currently finished my <span class="important-text">Third Year</span> at the university and am looking forward to graduate in 2022.</p>
+                   <p>I love creating beautiful user interfaces for the web and also enjoy implementing back-end technologies to create websites, web applications, or anything in between.</p>
+                   <p>This is why I inspire to be a <span class="important-text">Full-Stack Web Developer</span> and build great products for the internet.</p> 
+               </div>
+               <div class="profile-pic">
+                   <div class="img">
+                      <img src="./img/profile.jpeg" alt="I am Ben">
+                   </div>    
+               </div>
+           </div>
+
+           <div class="skills" id="skills">
+            <h1><span>02.</span> Skills</h1>
+            <p>Here are a few technologies I've worked with through out my studies:</p>
+            <details>
+                <summary>Programming Languages</summary>
+                <ol id="languages">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Javascript</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>Frameworks and Libraries</summary>
+                <ol id="frameworks">
+                    <li>Laravel</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Vue.js</li>
+                    <li>SASS</li>
+                    <li>Bootstrap</li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>Tools and Platforms</summary>
+                <ol id="tools">
+                    <li>Git</li>
+                    <li>Netlify</li>
+                    <li>Firebase</li>
+                    <li>Heroku</li>
+                    <li>VS Code</li>
+                </ol>
+            </details>
+           </div>
+
+           <div class="projects" id="projects">
+               <h1><span>03.</span> Projects</h1>
+               <h2>Coming Soon...Just finishing up.</h2>
+           </div>
+
+           <div class="contact" id="contact">
+            <h1><span>04.</span> Contact</h1>
+            <h2>Get In Touch</h2>
+            <p>I'm currently looking for new internship opportunities to grow my experience and thus, my inbox is always open. Whether you have a question, an opportunity for me or just want to say hi, I'll do my best to get back to you as soon as possible!</p>
+            <a href="mailto:benmnjoroge98@gmail.com" target="_blank" rel="noopener noreferrer">Get In Touch</a>
+            <p id="email">benmnjoroge98@gmail.com</p>
+           </div>
+           
+       </div>
+
+       <div class="copyright">
+           <div class="emails">  
+            <p> benmnjoroge98@gmail.com </p>
+            <div class="vertical-line"></div>
+           </div>
+       </div>
+    </section>
+    <script defer>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.boxShadow = "none";
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.boxShadow = "0px 4px 10px 4px #011430";
+                    document.getElementById("navbar").style.top = "-80px";
+                }
+        prevScrollpos = currentScrollPos;
+    }
+    </script>
+</body>
+</html>
