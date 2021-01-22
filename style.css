@@ -6142,6 +6142,209 @@ body {
   font-family: "Fira Code", monospace;
 }
 
+.important-text {
+  color: #f39d07;
+}
+
+.vertical-line {
+  border: 1px solid #8892b0;
+  height: 200px;
+  background-color: #8892b0;
+}
+
+details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem 0.5rem;
+  margin: 10px;
+  background: #0c1e38;
+  color: #ccd6f6;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
+          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  /* Adds an icon when the <details> is closed... */
+}
+
+details summary:hover {
+  background: #0a192f;
+}
+
+details summary:after {
+  content: "+";
+  font-size: 2rem;
+}
+
+/* ...and switches it when <details> is open */
+details[open] > summary::after {
+  content: "-";
+  font-size: 2rem;
+}
+
+/* Removes the ugly default arrow on Chrome */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: open 0.5s ease-in-out;
+          animation: open 0.5s ease-in-out;
+}
+
+@-webkit-keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a192f;
+  font-family: "Fira Code", monospace;
+}
+
+.important-text {
+  color: #f39d07;
+}
+
+.vertical-line {
+  border: 1px solid #8892b0;
+  height: 200px;
+  background-color: #8892b0;
+}
+
+details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem 0.5rem;
+  margin: 10px;
+  background: #0c1e38;
+  color: #ccd6f6;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
+          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  /* Adds an icon when the <details> is closed... */
+}
+
+details summary:hover {
+  background: #0a192f;
+}
+
+details summary:after {
+  content: "+";
+  font-size: 2rem;
+}
+
+/* ...and switches it when <details> is open */
+details[open] > summary::after {
+  content: "-";
+  font-size: 2rem;
+}
+
+/* Removes the ugly default arrow on Chrome */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: open 0.5s ease-in-out;
+          animation: open 0.5s ease-in-out;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
 .intro {
   z-index: 1;
   position: fixed;
@@ -6172,13 +6375,13 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40em;
+  width: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
 .intro p span {
-  font: 700 4em/1 "Oswald", sans-serif;
+  font: 700 3.5em/1 "Oswald", sans-serif;
   letter-spacing: 0;
   padding: 0.25em 0 0.325em;
   display: block;
@@ -6214,10 +6417,121 @@ body {
   }
 }
 
+/* responsive settings section */
+@media screen and (max-width: 800px) {
+  .intro p span {
+    font: 3vw !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a192f;
+  font-family: "Fira Code", monospace;
+}
+
+.important-text {
+  color: #f39d07;
+}
+
+.vertical-line {
+  border: 1px solid #8892b0;
+  height: 200px;
+  background-color: #8892b0;
+}
+
+details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem 0.5rem;
+  margin: 10px;
+  background: #0c1e38;
+  color: #ccd6f6;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
+          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  /* Adds an icon when the <details> is closed... */
+}
+
+details summary:hover {
+  background: #0a192f;
+}
+
+details summary:after {
+  content: "+";
+  font-size: 2rem;
+}
+
+/* ...and switches it when <details> is open */
+details[open] > summary::after {
+  content: "-";
+  font-size: 2rem;
+}
+
+/* Removes the ugly default arrow on Chrome */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: open 0.5s ease-in-out;
+          animation: open 0.5s ease-in-out;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
 .navbar {
   background-color: #0a192f;
   width: 100vw;
-  padding: 10px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6245,7 +6559,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .navbar ul li {
@@ -6294,17 +6608,207 @@ body {
   background-color: #0c1e38;
 }
 
+.menu-btn {
+  position: relative;
+  display: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-btn .menu-btn_burger {
+  width: 40px;
+  height: 4px;
+  background: #f39d07;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-btn .menu-btn_burger::before,
+.menu-btn .menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background: #f39d07;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-btn .menu-btn_burger::before {
+  width: 30px;
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+
+.menu-btn .menu-btn_burger::after {
+  width: 50px;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn_burger {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform: translateX(35px, -35px);
+          transform: translateX(35px, -35px);
+  width: 50px;
+}
+
+.menu-btn.open .menu-btn_burger::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform: translateX(35px, 35px);
+          transform: translateX(35px, 35px);
+}
+
+/* responsive settings section */
+@media screen and (max-width: 800px) {
+  .navbar ul {
+    display: none;
+  }
+  .navbar .menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a192f;
+  font-family: "Fira Code", monospace;
+}
+
+.important-text {
+  color: #f39d07;
+}
+
+.vertical-line {
+  border: 1px solid #8892b0;
+  height: 200px;
+  background-color: #8892b0;
+}
+
+details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem 0.5rem;
+  margin: 10px;
+  background: #0c1e38;
+  color: #ccd6f6;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
+          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  /* Adds an icon when the <details> is closed... */
+}
+
+details summary:hover {
+  background: #0a192f;
+}
+
+details summary:after {
+  content: "+";
+  font-size: 2rem;
+}
+
+/* ...and switches it when <details> is open */
+details[open] > summary::after {
+  content: "-";
+  font-size: 2rem;
+}
+
+/* Removes the ugly default arrow on Chrome */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: open 0.5s ease-in-out;
+          animation: open 0.5s ease-in-out;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #0a192f;
   width: 100%;
   min-height: 100vh;
-}
-
-.main .important-text {
-  color: #f39d07;
+  padding: 20px;
 }
 
 .main .content {
@@ -6322,7 +6826,7 @@ body {
 
 .main .content .hero-section #intro-text {
   color: #f39d07;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .main .content .hero-section #name {
@@ -6334,7 +6838,7 @@ body {
 .main .content .hero-section #role {
   display: inline;
   color: #8892b0;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .main .content .hero-section #cursor-name {
@@ -6347,7 +6851,7 @@ body {
 .main .content .hero-section p {
   width: 70%;
   color: #8892b0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-top: 20px;
   margin-bottom: 60px;
 }
@@ -6377,8 +6881,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 2.5s linear;
-  transition: 2.5s linear;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .main .content .about .details {
@@ -6404,74 +6910,52 @@ body {
 }
 
 .main .content .about .profile-pic {
-  padding: 20px;
+  position: relative;
+  padding: 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .main .content .about .profile-pic .img {
-  border-radius: 50%;
-  width: 350px;
-  height: 350px;
-  overflow: hidden;
-  -webkit-animation: pulse 3s linear infinite;
-          animation: pulse 3s linear infinite;
+  position: relative;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+.main .content .about .profile-pic .img::after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f39d07;
+  opacity: 0.5;
 }
 
 .main .content .about .profile-pic .img img {
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   cursor: pointer;
 }
 
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 214, 246, 0.7), 0 0 0 0 rgba(204, 214, 246, 0.7);
-            box-shadow: 0 0 0 0 rgba(204, 214, 246, 0.7), 0 0 0 0 rgba(204, 214, 246, 0.7);
-  }
-  40% {
-    -webkit-box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 0 rgba(204, 214, 246, 0.7);
-            box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 0 rgba(204, 214, 246, 0.7);
-  }
-  80% {
-    -webkit-box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-            box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-            box-shadow: 0 0 0 0 rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-  }
+.main .content .about .profile-pic .img:hover::after {
+  content: "";
+  opacity: 0;
 }
 
-@keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 214, 246, 0.7), 0 0 0 0 rgba(204, 214, 246, 0.7);
-            box-shadow: 0 0 0 0 rgba(204, 214, 246, 0.7), 0 0 0 0 rgba(204, 214, 246, 0.7);
-  }
-  40% {
-    -webkit-box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 0 rgba(204, 214, 246, 0.7);
-            box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 0 rgba(204, 214, 246, 0.7);
-  }
-  80% {
-    -webkit-box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-            box-shadow: 0 0 0 50px rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-            box-shadow: 0 0 0 0 rgba(204, 214, 246, 0), 0 0 0 30px rgba(204, 214, 246, 0);
-  }
+.main .content .about .profile-pic .img:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .main .content .skills {
@@ -6575,7 +7059,7 @@ body {
 }
 
 .main .content .contact h1 {
-  color: #ccd6f6;
+  color: #f39d07;
   margin: 20px;
 }
 
@@ -6671,7 +7155,7 @@ body {
   margin: 20px;
 }
 
-.main .copyright .emails {
+.main .copyright .by {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6690,7 +7174,7 @@ body {
   bottom: 0;
 }
 
-.main .copyright .emails p {
+.main .copyright .by p {
   margin: 20px;
   color: #ccd6f6;
   font-size: 1.3rem;
@@ -6699,98 +7183,79 @@ body {
           writing-mode: vertical-rl;
 }
 
-.vertical-line {
-  border: 1px solid #8892b0;
-  height: 200px;
-  background-color: #8892b0;
-}
-
-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-details summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.3rem 0.5rem;
-  margin: 10px;
-  background: #0c1e38;
-  color: #ccd6f6;
-  font-family: "Inconsolata", monospace;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  outline: none;
-  border-radius: 0.3rem;
-  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
-          box-shadow: 0 3px 2px 1px #8892b0;
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-  /* Adds an icon when the <details> is closed... */
-}
-
-details summary:hover {
-  background: #0a192f;
-}
-
-details summary:after {
-  content: "+";
-  font-size: 2rem;
-}
-
-/* ...and switches it when <details> is open */
-details[open] > summary::after {
-  content: "-";
-  font-size: 2rem;
-}
-
-/* Removes the ugly default arrow on Chrome */
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-details[open] summary ~ * {
-  -webkit-animation: open 0.5s ease-in-out;
-          animation: open 0.5s ease-in-out;
-}
-
-@-webkit-keyframes open {
-  from {
-    opacity: 0;
-    margin-top: -20px;
+/* responsive settings section */
+@media screen and (max-width: 800px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  to {
-    opacity: 1;
-    margin-top: 0px;
+  .links {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 0 !important;
   }
-}
-
-@keyframes open {
-  from {
-    opacity: 0;
-    margin-top: -20px;
+  .links .icons {
+    position: relative !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    bottom: unset !important;
   }
-  to {
-    opacity: 1;
-    margin-top: 0px;
+  .links .icons .vertical-line {
+    display: none;
+  }
+  .copyright {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin: 0 !important;
+  }
+  .copyright .by {
+    position: relative !important;
+    display: row !important;
+    bottom: unset !important;
+  }
+  .copyright .by p {
+    font-size: 3vw !important;
+    -webkit-writing-mode: horizontal-tb !important;
+        -ms-writing-mode: lr-tb !important;
+            writing-mode: horizontal-tb !important;
+  }
+  .copyright .by .vertical-line {
+    display: none;
+  }
+  .content .hero-section #name {
+    font-size: 7vw !important;
+  }
+  .content .hero-section #role {
+    font-size: 6vw !important;
+  }
+  .content .hero-section p {
+    font-size: 3vw !important;
+  }
+  .content .about {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .content .about p {
+    font-size: 3vw !important;
+  }
+  .content .contact h2 {
+    font-size: 8vw !important;
+  }
+  .content .contact p {
+    font-size: 3vw !important;
+    width: 100% !important;
+    margin: 10px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

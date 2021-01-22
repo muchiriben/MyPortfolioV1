@@ -1,9 +1,9 @@
 const myname = 'Benard Muchiri.'
-const role = 'And am a Developer.'
+const role = 'And I am a Developer.'
+
 
 var cursor = true;
 var speed = 250;
-
 let index = 0;
 let index2 = 0;
 
@@ -33,4 +33,5 @@ function writeName() {
 }
 
 
-setTimeout(() => {  setInterval(writeName, 400) }, 2800);
+setTimeout(() => {  setInterval(writeName, 300) }, 2800);
+

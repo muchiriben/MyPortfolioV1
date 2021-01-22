@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a192f;
+  font-family: "Fira Code", monospace;
+}
+
+.important-text {
+  color: #f39d07;
+}
+
+.vertical-line {
+  border: 1px solid #8892b0;
+  height: 200px;
+  background-color: #8892b0;
+}
+
+details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem 0.5rem;
+  margin: 10px;
+  background: #0c1e38;
+  color: #ccd6f6;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
+          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  /* Adds an icon when the <details> is closed... */
+}
+
+details summary:hover {
+  background: #0a192f;
+}
+
+details summary:after {
+  content: "+";
+  font-size: 2rem;
+}
+
+/* ...and switches it when <details> is open */
+details[open] > summary::after {
+  content: "-";
+  font-size: 2rem;
+}
+
+/* Removes the ugly default arrow on Chrome */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: open 0.5s ease-in-out;
+          animation: open 0.5s ease-in-out;
+}
+
+@-webkit-keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.intro {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  font-family: "Anonymous Pro", monospace;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+.intro-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro p {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  display: inline-block;
+  border: 4px double white;
+  border-width: 7px 0;
+  padding: 1.5em 0em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.intro p span {
+  font: 700 3em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.7);
+  /* Clip Background Image */
+  background: url("img/orange-fill.png") repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: fill-animation 80s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+@-webkit-keyframes fill-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes fill-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* responsive settings section */
+@media screen and (max-width: 800px) {
+  .intro p span {
+    font: 700 2em/1 "Oswald", sans-serif !important;
+  }
+}
+/*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,139 @@
+@import "global";
+
+.navbar {
+  background-color: $backgroundBlue;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  transition: 1s;
+  font-family: "Inconsolata", monospace;
+  //font-family: "Anonymous Pro", monospace;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.2rem;
+
+    li {
+      list-style-type: none;
+      margin: 5px 20px;
+      color: $myGrey1;
+      cursor: pointer;
+
+      span {
+        color: $myOrange;
+      }
+
+      a {
+        text-decoration: none;
+        color: $myGrey1;
+        &:hover {
+          color: $myOrange;
+        }
+      }
+    }
+  }
+
+  .logo {
+    text-decoration: none;
+    border: 1px solid $myOrange;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 20px;
+    color: $myGrey1;
+    &:hover {
+      background-color: $backgroundBlueLight;
+    }
+  }
+
+  .resume {
+    text-decoration: none;
+    border: 1px solid $myOrange;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 20px;
+    color: $myOrange;
+    &:hover {
+      background-color: $backgroundBlueLight;
+    }
+  }
+}
+
+.menu-btn {
+  position: relative;
+  display: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(180deg);
+  //border: 3px solid #ffffff;
+
+  .menu-btn_burger {
+    width: 40px;
+    height: 4px;
+    background: $myOrange;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu-btn_burger::before,
+  .menu-btn_burger::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: $myOrange;
+    border-radius: 5px;
+    // box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu-btn_burger::before {
+    width: 30px;
+    transform: translateY(-16px);
+  }
+  .menu-btn_burger::after {
+    width: 50px;
+    transform: translateY(16px);
+  }
+}
+
+//animation
+.menu-btn.open {
+  .menu-btn_burger {
+    //transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn_burger::before {
+    transform: rotate(45deg);
+    transform: translateX(35px, -35px);
+    width: 50px;
+  }
+  .menu-btn_burger::after {
+    transform: rotate(-45deg);
+    transform: translateX(35px, 35px);
+  }
+}
+
+/* responsive settings section */
+@media screen and (max-width: 800px) {
+  .navbar {
+    ul {
+      display: none;
+    }
+
+    .menu-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+$myOrange: #f39d07;
+$myGrey1: #ccd6f6; //(204,214,246)
+$myGrey2: #8892b0; //(136,146,176)
+$backgroundBlue: #0a192f;
+$backgroundBlueLight: #0c1e38; //(12,30,56)
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $backgroundBlue;
+  font-family: "Fira Code", monospace;
+}
+
+.important-text {
+  color: $myOrange;
+}
+
+.vertical-line {
+  border: 1px solid $myGrey2;
+  height: 200px;
+  background-color: $myGrey2;
+}
+
+details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  //border: 2px solid #349856;
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    margin: 10px;
+    background: $backgroundBlueLight;
+    color: $myGrey1;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 3px 2px 1px $myGrey2;
+    transition: background-color 0.4s;
+
+    &:hover {
+      background: $backgroundBlue;
+    }
+
+    /* Adds an icon when the <details> is closed... */
+    &:after {
+      content: "+";
+      font-size: 2rem;
+    }
+  }
+}
+
+/* ...and switches it when <details> is open */
+details[open] > summary::after {
+  content: "-";
+  font-size: 2rem;
+}
+
+/* Removes the ugly default arrow on Chrome */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  animation: open 0.5s ease-in-out;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
