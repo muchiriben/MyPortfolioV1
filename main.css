@@ -543,7 +543,7 @@ details[open] summary ~ * {
     bottom: unset !important;
   }
   .copyright .by p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
     -webkit-writing-mode: horizontal-tb !important;
         -ms-writing-mode: lr-tb !important;
             writing-mode: horizontal-tb !important;
@@ -562,7 +562,7 @@ details[open] summary ~ * {
     margin-left: 10px;
   }
   .content .hero-section p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
   }
   .content .about {
     -webkit-box-orient: vertical !important;
@@ -571,13 +571,13 @@ details[open] summary ~ * {
             flex-direction: column !important;
   }
   .content .about p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
   }
   .content .contact h2 {
     font-size: 8vw !important;
   }
   .content .contact p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
     width: 100% !important;
     margin: 10px !important;
   }

@@ -6601,7 +6601,7 @@ details[open] summary ~ * {
   border: 1px solid #f39d07;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 0 20px;
+  margin: 0 25px;
   color: #f39d07;
 }
 
@@ -6650,7 +6650,7 @@ details[open] summary ~ * {
 
 .side-navbar ul li {
   list-style-type: none;
-  margin: 20px;
+  margin: 25px;
   color: #ccd6f6;
   cursor: pointer;
 }
@@ -7303,7 +7303,7 @@ details[open] summary ~ * {
     bottom: unset !important;
   }
   .copyright .by p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
     -webkit-writing-mode: horizontal-tb !important;
         -ms-writing-mode: lr-tb !important;
             writing-mode: horizontal-tb !important;
@@ -7322,7 +7322,7 @@ details[open] summary ~ * {
     margin-left: 10px;
   }
   .content .hero-section p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
   }
   .content .about {
     -webkit-box-orient: vertical !important;
@@ -7331,13 +7331,13 @@ details[open] summary ~ * {
             flex-direction: column !important;
   }
   .content .about p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
   }
   .content .contact h2 {
     font-size: 8vw !important;
   }
   .content .contact p {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
     width: 100% !important;
     margin: 10px !important;
   }

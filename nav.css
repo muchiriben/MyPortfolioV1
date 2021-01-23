@@ -186,7 +186,7 @@ details[open] summary ~ * {
   border: 1px solid #f39d07;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 0 20px;
+  margin: 0 25px;
   color: #f39d07;
 }
 
@@ -235,7 +235,7 @@ details[open] summary ~ * {
 
 .side-navbar ul li {
   list-style-type: none;
-  margin: 20px;
+  margin: 25px;
   color: #ccd6f6;
   cursor: pointer;
 }
