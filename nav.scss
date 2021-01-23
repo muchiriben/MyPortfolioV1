@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 888;
   top: 0;
   transition: 1s;
   font-family: "Inconsolata", monospace;
@@ -51,18 +52,65 @@
       background-color: $backgroundBlueLight;
     }
   }
+}
 
-  .resume {
-    text-decoration: none;
-    border: 1px solid $myOrange;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 20px;
-    color: $myOrange;
-    &:hover {
-      background-color: $backgroundBlueLight;
+.resume {
+  text-decoration: none;
+  border: 1px solid $myOrange;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 20px;
+  color: $myOrange;
+  &:hover {
+    background-color: $backgroundBlueLight;
+  }
+}
+
+//side navigation
+.side-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: -80vw;
+  background-color: #112240;
+  width: 80vw;
+  height: 100vh;
+  z-index: 777;
+  transition: all 600ms ease-in-out;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+
+    li {
+      list-style-type: none;
+      margin: 20px;
+      color: $myGrey1;
+      cursor: pointer;
+
+      span {
+        color: $myOrange;
+      }
+
+      a {
+        text-decoration: none;
+        color: $myGrey1;
+        &:hover {
+          color: $myOrange;
+        }
+      }
     }
   }
+}
+
+.side-navbar.open {
+  right: 0;
 }
 
 .menu-btn {
@@ -71,8 +119,13 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
   transform: rotate(180deg);
+  user-select: none;
+
+  &:focus {
+    outline: none !important;
+  }
   //border: 3px solid #ffffff;
 
   .menu-btn_burger {
@@ -108,7 +161,7 @@
 //animation
 .menu-btn.open {
   .menu-btn_burger {
-    //transform: translateX(-50px);
+    position: fixed;
     background: transparent;
     box-shadow: none;
   }
@@ -126,12 +179,13 @@
 /* responsive settings section */
 @media screen and (max-width: 800px) {
   .navbar {
+    background-color: #112240 !important;
     ul {
-      display: none;
+      display: none !important;
     }
 
     .menu-btn {
-      display: flex;
+      display: flex !important;
       justify-content: center;
       align-items: center;
     }

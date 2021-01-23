@@ -161,7 +161,7 @@ details[open] summary ~ * {
   font-size: 3rem;
   background-color: #ccd6f6;
   color: #ccd6f6;
-  margin-left: 2px;
+  margin-left: 0 !important;
 }
 
 .main .content .hero-section p {
@@ -226,7 +226,6 @@ details[open] summary ~ * {
 }
 
 .main .content .about .profile-pic {
-  position: relative;
   padding: 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -251,6 +250,7 @@ details[open] summary ~ * {
   height: 100%;
   background-color: #f39d07;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .main .content .about .profile-pic .img img {
@@ -261,7 +261,11 @@ details[open] summary ~ * {
      object-fit: cover;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  cursor: pointer;
+}
+
+.main .content .about .profile-pic .img:hover {
+  -webkit-transform: translate(1px, 1px);
+          transform: translate(1px, 1px);
 }
 
 .main .content .about .profile-pic .img:hover::after {
@@ -552,6 +556,10 @@ details[open] summary ~ * {
   }
   .content .hero-section #role {
     font-size: 6vw !important;
+  }
+  .content .hero-section #cursor-name {
+    font-size: 6vw !important;
+    margin-left: 10px;
   }
   .content .hero-section p {
     font-size: 3vw !important;

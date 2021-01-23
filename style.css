@@ -6346,7 +6346,7 @@ details[open] summary ~ * {
 }
 
 .intro {
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   top: 0;
   font-family: "Anonymous Pro", monospace;
@@ -6381,7 +6381,7 @@ details[open] summary ~ * {
 }
 
 .intro p span {
-  font: 700 3.5em/1 "Oswald", sans-serif;
+  font: 700 3em/1 "Oswald", sans-serif;
   letter-spacing: 0;
   padding: 0.25em 0 0.325em;
   display: block;
@@ -6420,7 +6420,7 @@ details[open] summary ~ * {
 /* responsive settings section */
 @media screen and (max-width: 800px) {
   .intro p span {
-    font: 3vw !important;
+    font: 700 2em/1 "Oswald", sans-serif !important;
   }
 }
 
@@ -6542,6 +6542,7 @@ details[open] summary ~ * {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 888;
   top: 0;
   -webkit-transition: 1s;
   transition: 1s;
@@ -6595,7 +6596,7 @@ details[open] summary ~ * {
   background-color: #0c1e38;
 }
 
-.navbar .resume {
+.resume {
   text-decoration: none;
   border: 1px solid #f39d07;
   border-radius: 5px;
@@ -6604,8 +6605,71 @@ details[open] summary ~ * {
   color: #f39d07;
 }
 
-.navbar .resume:hover {
+.resume:hover {
   background-color: #0c1e38;
+}
+
+.side-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  right: -80vw;
+  background-color: #112240;
+  width: 80vw;
+  height: 100vh;
+  z-index: 777;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+.side-navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.side-navbar ul li {
+  list-style-type: none;
+  margin: 20px;
+  color: #ccd6f6;
+  cursor: pointer;
+}
+
+.side-navbar ul li span {
+  color: #f39d07;
+}
+
+.side-navbar ul li a {
+  text-decoration: none;
+  color: #ccd6f6;
+}
+
+.side-navbar ul li a:hover {
+  color: #f39d07;
+}
+
+.side-navbar.open {
+  right: 0;
 }
 
 .menu-btn {
@@ -6614,10 +6678,18 @@ details[open] summary ~ * {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.menu-btn:focus {
+  outline: none !important;
 }
 
 .menu-btn .menu-btn_burger {
@@ -6655,6 +6727,7 @@ details[open] summary ~ * {
 }
 
 .menu-btn.open .menu-btn_burger {
+  position: fixed;
   background: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -6677,13 +6750,16 @@ details[open] summary ~ * {
 
 /* responsive settings section */
 @media screen and (max-width: 800px) {
+  .navbar {
+    background-color: #112240 !important;
+  }
   .navbar ul {
-    display: none;
+    display: none !important;
   }
   .navbar .menu-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6845,7 +6921,7 @@ details[open] summary ~ * {
   font-size: 3rem;
   background-color: #ccd6f6;
   color: #ccd6f6;
-  margin-left: 2px;
+  margin-left: 0 !important;
 }
 
 .main .content .hero-section p {
@@ -6910,7 +6986,6 @@ details[open] summary ~ * {
 }
 
 .main .content .about .profile-pic {
-  position: relative;
   padding: 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -6935,6 +7010,7 @@ details[open] summary ~ * {
   height: 100%;
   background-color: #f39d07;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .main .content .about .profile-pic .img img {
@@ -6945,7 +7021,11 @@ details[open] summary ~ * {
      object-fit: cover;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  cursor: pointer;
+}
+
+.main .content .about .profile-pic .img:hover {
+  -webkit-transform: translate(1px, 1px);
+          transform: translate(1px, 1px);
 }
 
 .main .content .about .profile-pic .img:hover::after {
@@ -7236,6 +7316,10 @@ details[open] summary ~ * {
   }
   .content .hero-section #role {
     font-size: 6vw !important;
+  }
+  .content .hero-section #cursor-name {
+    font-size: 6vw !important;
+    margin-left: 10px;
   }
   .content .hero-section p {
     font-size: 3vw !important;

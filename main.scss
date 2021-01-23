@@ -41,7 +41,7 @@
         font-size: 3rem;
         background-color: $myGrey1;
         color: $myGrey1;
-        margin-left: 2px;
+        margin-left: 0 !important;
       }
 
       p {
@@ -94,8 +94,6 @@
       }
 
       .profile-pic {
-        //border: 2px solid $myOrange;
-        position: relative;
         padding: 0px;
         flex: 1;
 
@@ -115,6 +113,7 @@
             height: 100%;
             background-color: $myOrange;
             opacity: 0.5;
+            cursor: pointer;
           }
           img {
             border-radius: 20px;
@@ -122,10 +121,10 @@
             height: 100%;
             object-fit: cover;
             filter: grayscale(1);
-            cursor: pointer;
           }
 
           &:hover {
+            transform: translate(1px, 1px);
             &::after {
               content: "";
               opacity: 0;
@@ -359,6 +358,10 @@
       }
       #role {
         font-size: 6vw !important;
+      }
+      #cursor-name {
+        font-size: 6vw !important;
+        margin-left: 10px;
       }
       p {
         font-size: 3vw !important;
