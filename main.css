@@ -50,7 +50,7 @@ details summary {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.3rem 0.5rem;
-  margin: 10px;
+  margin: 20px;
   background: #0c1e38;
   color: #ccd6f6;
   font-family: "Inconsolata", monospace;
@@ -59,8 +59,8 @@ details summary {
   cursor: pointer;
   outline: none;
   border-radius: 0.3rem;
-  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
-          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-box-shadow: 0 0 5px 2px #8892b0;
+          box-shadow: 0 0 5px 2px #8892b0;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   /* Adds an icon when the <details> is closed... */
@@ -246,15 +246,15 @@ details[open] summary ~ * {
   border-radius: 20px;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
   background-color: #f39d07;
   opacity: 0.5;
   cursor: pointer;
 }
 
 .main .content .about .profile-pic .img img {
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -354,11 +354,169 @@ details[open] summary ~ * {
   color: #f39d07;
 }
 
-.main .content .projects h2 {
+.main .content .projects .container {
+  width: 100%;
+}
+
+.main .content .projects .card {
+  border: 2px solid #ccd6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #ccd6f6;
+  border-radius: 10px;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.main .content .projects .card .card-header {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  height: 100%;
+  cursor: pointer;
+}
+
+.main .content .projects .card .card-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .content .projects .card .card-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10px;
+  margin: 0;
+  height: 100%;
+}
+
+.main .content .projects .card .card-body .tag {
+  border-radius: 10px;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  width: 100%;
   text-align: center;
   color: #ccd6f6;
-  font-size: 3rem;
-  margin-top: 40px;
+  padding: 8px 10px;
+  background-color: #0c1e38;
+}
+
+.main .content .projects .card .card-body h4 {
+  margin: 10px 0;
+  color: #0a192f;
+  font-size: 1.3rem;
+}
+
+.main .content .projects .card .card-body p {
+  color: #0c1e38;
+  font-size: 0.8rem;
+}
+
+.main .content .projects .card .card-body .techs {
+  margin: 20px 0;
+}
+
+.main .content .projects .card .card-body .techs h5 {
+  color: #0a192f;
+  font-size: 1rem;
+}
+
+.main .content .projects .card .card-body .techs .tech {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
+  width: 280px;
+}
+
+.main .content .projects .card .card-body .techs .tech small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: auto;
+  padding: 5px;
+  color: #0c1e38;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.main .content .projects .card .card-body .techs .tech small .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f39d07;
+  margin-right: 5px;
+}
+
+.main .content .projects .card .card-body .project-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.main .content .projects .card .card-body .project-link a {
+  background-color: #0c1e38;
+  color: #ccd6f6;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.main .content .projects .card .card-body .project-link a::after {
+  content: "\2192";
+  margin-left: 20px;
+  color: #ccd6f6;
+  font-size: 2rem;
+}
+
+.main .content .projects .card .card-body .project-link a:hover {
+  color: #f39d07;
+}
+
+.main .content .projects .card .card-body .project-link a:hover::after {
+  content: "\2192";
+  margin-left: 20px;
+  color: #f39d07;
+  font-size: 2rem;
 }
 
 .main .content .contact {
@@ -580,6 +738,34 @@ details[open] summary ~ * {
     font-size: 4vw !important;
     width: 100% !important;
     margin: 10px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    height: 600px !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .card-body .tag {
+    font-size: 3vw !important;
+  }
+  .card-body h4 {
+    font-size: 2.5vw !important;
+  }
+  .card-body p {
+    font-size: 2vw !important;
+  }
+  .card-body .techs h5 {
+    font-size: 2vw !important;
+  }
+  .card-body .techs .tech small {
+    font-size: 2vw !important;
+  }
+  .card-body .techs .project-link a {
+    font-size: 3vw !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -43,7 +43,7 @@ details {
     justify-content: space-between;
     align-items: center;
     padding: 0.3rem 0.5rem;
-    margin: 10px;
+    margin: 20px;
     background: $backgroundBlueLight;
     color: $myGrey1;
     font-family: "Inconsolata", monospace;
@@ -52,7 +52,7 @@ details {
     cursor: pointer;
     outline: none;
     border-radius: 0.3rem;
-    box-shadow: 0 3px 2px 1px $myGrey2;
+    box-shadow: 0 0 5px 2px $myGrey2;
     transition: background-color 0.4s;
 
     &:hover {

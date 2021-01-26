@@ -18,14 +18,14 @@
     </div>
 
     <script type="text/javascript">
-        window.addEventListener("load", () => {
+        window.addEventListener("DOMContentLoaded", () => {
           const intro = document.querySelector(".intro");
           setTimeout(() => {
             intro.classList.add("intro-finish");
           }, 2500);
           
         });
-      </script>
+    </script>
 <header>
     <nav class="navbar" id="navbar">
         <a class="logo" href="https://benard-njoroge.netlify.app/">B.M.N</a>
@@ -132,7 +132,63 @@
 
            <div class="projects" id="projects">
                <h1><span>03.</span> Projects</h1>
-               <h2>Coming Soon...Just finishing up.</h2>
+               <div class="container">
+
+                <div class="card">
+                    <div class="card-header">
+                      <img src="img/bwk.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span class="tag tag-blue">BikerWorldKenya</span>
+                      <h4>E-commerce Site</h4>
+                      <p>This is an e-commerce site where motorcycle riders can personally sell their bikes, motorcycle gear and motorcycle parts.
+                        It is also a platform that motorcycle dealerships, garages and schools can advertise their products and services.
+                        </p>
+            
+                      <div class="techs">
+                          <h5>Technologies</h5>
+                          <div class="tech">
+                            <small><div class="circle"></div>HTML</small>
+                            <small><div class="circle"></div>CSS</small>
+                            <small><div class="circle"></div>PHP</small>
+                            <small><div class="circle"></div>JAVASCRIPT</small>
+                            <small><div class="circle"></div>SQL</small>
+                          </div>
+                      </div>
+
+                      <div class="project-link">
+                        <a href="https//bikerworldkenya" target="__blank">View Website</a>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <img src="img/elimisha.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span class="tag tag-orange">Elimisha</span>
+                      <h4>Exam Management System</h4>
+                      <p>This is an exam management system that enables the users to store exam records and send 
+                        exam results to specific parents using bulk SMS API from Africa’s Talking. </p>
+            
+                      <div class="techs">
+                          <h5>Technologies</h5>
+                          <div class="tech">
+                            <small><div class="circle"></div>Html</small>
+                            <small><div class="circle"></div>Sass/Css</small>
+                            <small><div class="circle"></div>Laravel(Php)</small>
+                            <small><div class="circle"></div>SQL</small>
+                          </div>
+                      </div>
+
+                    <div class="project-link">
+                        <a href="#" target="__blank">View Website</a>
+                    </div>
+                    </div>
+                  </div>
+
+               </div>
            </div>
 
            <div class="contact" id="contact">
@@ -161,7 +217,7 @@
                     document.getElementById("navbar").style.top = "0";
                 } else {
                     document.getElementById("navbar").style.boxShadow = "0px 4px 10px 4px #011430";
-                    document.getElementById("navbar").style.top = "-80px";
+                    document.getElementById("navbar").style.top = "-100px";
                 }
         prevScrollpos = currentScrollPos;
     }

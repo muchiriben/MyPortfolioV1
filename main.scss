@@ -109,14 +109,14 @@
             border-radius: 20px;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: 300px;
             background-color: $myOrange;
             opacity: 0.5;
             cursor: pointer;
           }
           img {
-            border-radius: 20px;
+            border-radius: 10px;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -179,7 +179,6 @@
     .projects {
       min-height: 100vh;
       display: flex;
-      //align-items: center;
       justify-content: center;
       flex-direction: column;
 
@@ -192,11 +191,138 @@
         }
       }
 
-      h2 {
-        text-align: center;
-        color: $myGrey1;
-        font-size: 3rem;
-        margin-top: 40px;
+      .container {
+        width: 100%;
+      }
+
+      .card {
+        border: 2px solid $myGrey1;
+        display: flex;
+        flex-direction: row;
+        background-color: $myGrey1;
+        border-radius: 10px;
+        //box-shadow: 0 3px 10px $myGrey2;
+        width: 100%;
+        height: 500px;
+        margin-bottom: 30px;
+        //font-family: "Inconsolata", monospace;
+        overflow: hidden;
+
+        .card-header {
+          flex: 2;
+          height: 100%;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .card-body {
+          // border: 2px solid red;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding: 10px;
+          margin: 0;
+          height: 100%;
+
+          .tag {
+            border-radius: 10px;
+            font-size: 1.3rem;
+            margin: 10px 0;
+            width: 100%;
+            text-align: center;
+            color: $myGrey1;
+            padding: 8px 10px;
+            background-color: $backgroundBlueLight;
+          }
+          h4 {
+            margin: 10px 0;
+            color: $backgroundBlue;
+            font-size: 1.3rem;
+          }
+          p {
+            color: $backgroundBlueLight;
+            font-size: 0.8rem;
+          }
+
+          .techs {
+            margin: 20px 0;
+            h5 {
+              color: $backgroundBlue;
+              font-size: 1rem;
+            }
+
+            .tech {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 0.2rem;
+              width: 280px;
+
+              small {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                width: auto;
+                padding: 5px;
+                color: $backgroundBlueLight;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+
+                .circle {
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 50%;
+                  background-color: $myOrange;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+
+          .project-link {
+            // border: 2px solid yellow;
+            display: flex;
+            width: 100%;
+            padding: 10px 0;
+
+            a {
+              //border: 2px solid $myGrey1;
+              background-color: $backgroundBlueLight;
+              color: $myGrey1;
+              font-size: 1rem;
+              text-align: center;
+              padding: 10px;
+              width: 200px;
+              height: auto;
+              text-decoration: none;
+              border-radius: 10px;
+
+              &::after {
+                content: "\2192";
+                margin-left: 20px;
+                color: $myGrey1;
+                font-size: 2rem;
+              }
+
+              &:hover {
+                color: $myOrange;
+
+                &::after {
+                  content: "\2192";
+                  margin-left: 20px;
+                  color: $myOrange;
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -383,6 +509,39 @@
         font-size: 4vw !important;
         width: 100% !important;
         margin: 10px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    height: 600px !important;
+    flex-direction: column !important;
+  }
+  .card-body {
+    .tag {
+      font-size: 3vw !important;
+    }
+    h4 {
+      font-size: 2.5vw !important;
+    }
+    p {
+      font-size: 2vw !important;
+    }
+    .techs {
+      h5 {
+        font-size: 2vw !important;
+      }
+      .tech {
+        small {
+          font-size: 2vw !important;
+        }
+      }
+      .project-link {
+        a {
+          font-size: 3vw !important;
+        }
       }
     }
   }
