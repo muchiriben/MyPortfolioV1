@@ -33,5 +33,5 @@ function writeName() {
 }
 
 
-setTimeout(() => {  setInterval(writeName, 300) }, 2800);
+setTimeout(() => {  setInterval(writeName, 300) }, 32800);
 
