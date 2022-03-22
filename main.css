@@ -132,7 +132,6 @@ details[open] summary ~ * {
       -ms-flex: 10;
           flex: 10;
   background-color: #0a192f;
-  padding-left: 20px;
 }
 
 .main .content .hero-section {
@@ -143,6 +142,7 @@ details[open] summary ~ * {
 .main .content .hero-section #intro-text {
   color: #f39d07;
   font-size: 1.2rem;
+  display: inline;
 }
 
 .main .content .hero-section #name {
@@ -152,9 +152,10 @@ details[open] summary ~ * {
 }
 
 .main .content .hero-section #role {
+  z-index: 2;
   display: inline;
   color: #8892b0;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .main .content .hero-section #cursor-name {
@@ -165,7 +166,7 @@ details[open] summary ~ * {
 }
 
 .main .content .hero-section p {
-  width: 70%;
+  width: 60%;
   color: #8892b0;
   font-size: 1.2rem;
   margin-top: 20px;
@@ -184,6 +185,14 @@ details[open] summary ~ * {
 
 .main .content .hero-section .contact-me:hover {
   background-color: #0c1e38;
+}
+
+.main .content .hero-section .hero-svg {
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  top: 15%;
+  right: 10%;
 }
 
 .main .content .about {

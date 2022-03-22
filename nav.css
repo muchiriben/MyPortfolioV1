@@ -50,7 +50,7 @@ details summary {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.3rem 0.5rem;
-  margin: 10px;
+  margin: 20px;
   background: #0c1e38;
   color: #ccd6f6;
   font-family: "Inconsolata", monospace;
@@ -59,8 +59,8 @@ details summary {
   cursor: pointer;
   outline: none;
   border-radius: 0.3rem;
-  -webkit-box-shadow: 0 3px 2px 1px #8892b0;
-          box-shadow: 0 3px 2px 1px #8892b0;
+  -webkit-box-shadow: 0 0 5px 2px #8892b0;
+          box-shadow: 0 0 5px 2px #8892b0;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   /* Adds an icon when the <details> is closed... */

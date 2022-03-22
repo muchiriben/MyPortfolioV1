@@ -12,7 +12,6 @@
   .content {
     flex: 10;
     background-color: $backgroundBlue;
-    padding-left: 20px;
     //border: 2px solid green;
 
     .hero-section {
@@ -23,6 +22,7 @@
       #intro-text {
         color: $myOrange;
         font-size: 1.2rem;
+        display: inline;
       }
 
       #name {
@@ -32,9 +32,10 @@
       }
 
       #role {
+        z-index: 2;
         display: inline;
         color: $myGrey2;
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
 
       #cursor-name {
@@ -45,7 +46,7 @@
       }
 
       p {
-        width: 70%;
+        width: 60%;
         color: $myGrey2;
         font-size: 1.2rem;
         margin-top: 20px;
@@ -63,6 +64,14 @@
         &:hover {
           background-color: $backgroundBlueLight;
         }
+      }
+
+      .hero-svg {
+        width: 350px;
+        height: 400px;
+        position: absolute;
+        top: 15%;
+        right: 10%;
       }
     }
 
