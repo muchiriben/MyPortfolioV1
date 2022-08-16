@@ -7123,7 +7123,7 @@ details[open] summary ~ * {
   color: #f39d07;
 }
 
-.main .content .projects .container {
+.main .content .projects .container_gallery {
   width: 100%;
 }
 
@@ -7439,7 +7439,7 @@ details[open] summary ~ * {
 }
 
 /* gallery */
-.container {
+.container_gallery {
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -7451,6 +7451,7 @@ details[open] summary ~ * {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20px;
   padding: 50px 8%;
 }
 

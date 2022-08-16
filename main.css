@@ -691,6 +691,7 @@ details[open] summary ~ * {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20px;
   padding: 50px 8%;
 }
 
