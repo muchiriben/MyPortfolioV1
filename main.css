@@ -363,7 +363,7 @@ details[open] summary ~ * {
   color: #f39d07;
 }
 
-.main .content .projects .container {
+.main .content .projects .container_gallery {
   width: 100%;
 }
 
@@ -679,7 +679,7 @@ details[open] summary ~ * {
 }
 
 /* gallery */
-.container {
+.container_gallery {
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
